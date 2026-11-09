@@ -1,0 +1,107 @@
+services:
+  # ========================================================
+  # PESERTA 1: KATALOG SERVICE
+  # ========================================================
+  katalog-service:
+    build:
+      context: ./katalog-service
+      dockerfile: Dockerfile
+    container_name: unhan-katalog-service
+    ports:
+      - "5001:5001"
+    environment:
+      - PORT=5001
+      - NODE_ENV=production
+    networks:
+      - services_net
+    restart: unless-stopped
+
+  # ========================================================
+  # PESERTA 2: PELANGGAN SERVICE
+  # ========================================================
+  pelanggan-service:
+    build:
+      context: ./pelanggan-service
+      dockerfile: Dockerfile
+    container_name: unhan-pelanggan-service
+    ports:
+      - "5002:5002"
+    environment:
+      - PORT=5002
+      - NODE_ENV=production
+      - JWT_SECRET=unhan-sistem-terdistribusi-super-secret-key-2026
+    networks:
+      - services_net
+    restart: unless-stopped
+
+  # ========================================================
+  # PESERTA 3: ORDER SERVICE (SAGA ORCHESTRATOR)
+  # ========================================================
+  order-service:
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    container_name: unhan-order-service
+    ports:
+      - "5003:5003"
+    environment:
+      - PORT=5003
+      - NODE_ENV=production
+      - KATALOG_SERVICE_URL=http://katalog-service:5001
+      - PELANGGAN_SERVICE_URL=http://pelanggan-service:5002
+      - PEMBAYARAN_SERVICE_URL=http://pembayaran-service:5004
+    depends_on:
+      - katalog-service
+      - pelanggan-service
+      - pembayaran-service
+    networks:
+      - services_net
+    restart: unless-stopped
+
+  # ========================================================
+  # PESERTA 4: PEMBAYARAN SERVICE
+  # ========================================================
+  pembayaran-service:
+    build:
+      context: ./pembayaran-service
+      dockerfile: Dockerfile
+    container_name: unhan-pembayaran-service
+    ports:
+      - "5004:5004"
+    environment:
+      - PORT=5004
+      - NODE_ENV=production
+      - ORDER_SERVICE_URL=http://order-service:5003
+    networks:
+      - services_net
+    restart: unless-stopped
+
+  # ========================================================
+  # PESERTA 5: API GATEWAY & DASHBOARD
+  # ========================================================
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: unhan-api-gateway
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - KATALOG_SERVICE_URL=http://katalog-service:5001
+      - PELANGGAN_SERVICE_URL=http://pelanggan-service:5002
+      - ORDER_SERVICE_URL=http://order-service:5003
+      - PEMBAYARAN_SERVICE_URL=http://pembayaran-service:5004
+    depends_on:
+      - katalog-service
+      - pelanggan-service
+      - order-service
+      - pembayaran-service
+    networks:
+      - services_net
+    restart: unless-stopped
+
+networks:
+  services_net:
+    driver: bridge
