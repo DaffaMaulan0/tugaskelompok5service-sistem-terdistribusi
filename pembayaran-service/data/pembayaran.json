@@ -1,0 +1,62 @@
+{
+  "payments": [
+    {
+      "id": "pay-1794240008255",
+      "orderId": "order-1794240008232",
+      "customerId": "usr-1794240007381",
+      "customerName": "Kadet Mahasiswa",
+      "amount": 13600000,
+      "paymentMethod": "BANK_TRANSFER",
+      "status": "FAILED",
+      "referenceNumber": "VA-889926829201",
+      "metadata": {
+        "bankName": "Bank Mandiri Virtual Account",
+        "vaNumber": "VA-889926829201",
+        "expiryHours": 24
+      },
+      "createdAt": "2026-11-09T16:00:08.255Z",
+      "failedAt": "2026-11-09T16:00:08.287Z",
+      "failureReason": "Saldo kartu tidak mencukupi (Uji Kompensasi)",
+      "webhookSync": {
+        "success": true,
+        "timestamp": "2026-11-09T16:00:08.307Z"
+      }
+    },
+    {
+      "id": "pay-1794240007906",
+      "orderId": "order-1794240007704",
+      "customerId": "usr-1794240007381",
+      "customerName": "Kadet Mahasiswa",
+      "amount": 24500000,
+      "paymentMethod": "QRIS",
+      "status": "SUCCESS",
+      "referenceNumber": "QRIS-40007906",
+      "metadata": {
+        "qrCodeString": "00020101021226680016ID.CO.UNHAN.PAY51450114000100000000005204581253033605802ID5914UNHAN STORE6005BOGOR63049279",
+        "qrExpiryMinutes": 15
+      },
+      "createdAt": "2026-11-09T16:00:07.906Z",
+      "paidAt": "2026-11-09T16:00:07.956Z",
+      "webhookSync": {
+        "success": true,
+        "timestamp": "2026-11-09T16:00:08.157Z"
+      }
+    },
+    {
+      "id": "pay-1001",
+      "orderId": "order-1001",
+      "customerId": "usr-cust-2",
+      "customerName": "Siti Rahmawati",
+      "amount": 6800000,
+      "paymentMethod": "QRIS",
+      "status": "SUCCESS",
+      "referenceNumber": "QRIS-UNHAN-882910384",
+      "createdAt": "2026-11-04T10:00:10.000Z",
+      "paidAt": "2026-11-04T10:02:30.000Z",
+      "metadata": {
+        "qrCodeString": "00020101021226680016ID.CO.UNHAN.PAY51450114000100000000005204581253033605802ID5914UNHAN STORE6005BOGOR",
+        "gatewayProvider": "Simulated Gateway Switch"
+      }
+    }
+  ]
+}
