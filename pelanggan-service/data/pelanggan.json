@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "name": "Administrator Toko",
+      "email": "admin@toko.com",
+      "passwordHash": "$2a$10$7mUrh8T2SRzeZsSeg80bde.UzoKNKyEd6wzgJ5iryNAoI2a/NI386",
+      "phone": "081299990001",
+      "role": "admin",
+      "createdAt": "2026-11-01T00:00:00.000Z"
+    },
+    {
+      "id": "usr-cust-1",
+      "name": "Budi Santoso",
+      "email": "budi@gmail.com",
+      "passwordHash": "$2a$10$7mUrh8T2SRzeZsSeg80bde25/5WSqSh2bWl2C8RXSCqbNwKQOlNk6",
+      "phone": "081234567890",
+      "role": "customer",
+      "createdAt": "2026-11-02T08:30:00.000Z"
+    },
+    {
+      "id": "usr-cust-2",
+      "name": "Siti Rahmawati",
+      "email": "siti@gmail.com",
+      "passwordHash": "$2a$10$7mUrh8T2SRzeZsSeg80bdemPYCTp8Tzepj71mPuoXFYZvHR9D5wDq",
+      "phone": "081288887777",
+      "role": "customer",
+      "createdAt": "2026-11-03T09:15:00.000Z"
+    },
+    {
+      "id": "usr-1794240007381",
+      "name": "Kadet Mahasiswa",
+      "email": "tester_1794240007084@unhan.ac.id",
+      "passwordHash": "$2a$10$GnCJOYaMMIkxOvSpPU4q/OLSoOFDQG9zOCIziB.V0FKLRwzcD/6am",
+      "phone": "08123456789",
+      "role": "customer",
+      "createdAt": "2026-11-09T16:00:07.381Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "addr-1",
+      "userId": "usr-cust-1",
+      "recipientName": "Budi Santoso",
+      "phone": "081234567890",
+      "street": "Kawasan IPSC Sentul, Jl. Pasir Penganten",
+      "city": "Bogor",
+      "province": "Jawa Barat",
+      "postalCode": "16810",
+      "isDefault": true
+    },
+    {
+      "id": "addr-2",
+      "userId": "usr-cust-2",
+      "recipientName": "Siti Rahmawati",
+      "phone": "081288887777",
+      "street": "Komplek Unhan Indonesia, Sentul Citeureup",
+      "city": "Bogor",
+      "province": "Jawa Barat",
+      "postalCode": "16810",
+      "isDefault": true
+    }
+  ]
+}
