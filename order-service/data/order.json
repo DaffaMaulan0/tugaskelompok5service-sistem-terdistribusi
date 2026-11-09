@@ -1,0 +1,191 @@
+{
+  "carts": {
+    "usr-cust-1": [
+      {
+        "productId": "prod-1",
+        "name": "Laptop Taktikal Ruggedized Core i7",
+        "price": 24500000,
+        "quantity": 1,
+        "imageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=60"
+      }
+    ],
+    "usr-1794240007381": []
+  },
+  "orders": [
+    {
+      "id": "order-1794240008232",
+      "userId": "usr-1794240007381",
+      "customerName": "Kadet Mahasiswa",
+      "customerEmail": "tester_1794240007084@unhan.ac.id",
+      "items": [
+        {
+          "productId": "prod-2",
+          "name": "Smartwatch GPS Taktikal Solarpower",
+          "price": 6800000,
+          "quantity": 2,
+          "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "totalAmount": 13600000,
+      "status": "CANCELLED",
+      "paymentMethod": "BANK_TRANSFER",
+      "shippingAddress": {
+        "recipientName": "Kadet Mahasiswa",
+        "street": "Alamat pengiriman default",
+        "city": "Jakarta"
+      },
+      "paymentId": "pay-1794240008255",
+      "createdAt": "2026-11-09T16:00:08.251Z",
+      "timeline": [
+        {
+          "timestamp": "2026-11-09T16:00:08.251Z",
+          "event": "ORDER_INITIATED",
+          "message": "Order dibuat dan siap menunggu inisiasi pembayaran"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:08.251Z",
+          "event": "STOCK_RESERVED",
+          "message": "Stok berhasil dikunci di Katalog Service (Pending Payment)"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:08.261Z",
+          "event": "PAYMENT_INITIATED",
+          "message": "Tagihan pembayaran pay-1794240008255 berhasil diterbitkan dengan metode BANK_TRANSFER"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:08.306Z",
+          "event": "SAGA_COMPENSATION_RELEASED",
+          "message": "[KOMPENSASI SAGA] Pembayaran gagal (Saldo kartu tidak mencukupi (Uji Kompensasi)). Stok telah berhasil di-release kembali ke katalog."
+        }
+      ],
+      "paymentDetails": {
+        "id": "pay-1794240008255",
+        "orderId": "order-1794240008232",
+        "customerId": "usr-1794240007381",
+        "customerName": "Kadet Mahasiswa",
+        "amount": 13600000,
+        "paymentMethod": "BANK_TRANSFER",
+        "status": "PENDING",
+        "referenceNumber": "VA-889926829201",
+        "metadata": {
+          "bankName": "Bank Mandiri Virtual Account",
+          "vaNumber": "VA-889926829201",
+          "expiryHours": 24
+        },
+        "createdAt": "2026-11-09T16:00:08.255Z"
+      },
+      "cancellationReason": "Saldo kartu tidak mencukupi (Uji Kompensasi)"
+    },
+    {
+      "id": "order-1794240007704",
+      "userId": "usr-1794240007381",
+      "customerName": "Kadet Mahasiswa",
+      "customerEmail": "tester_1794240007084@unhan.ac.id",
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Laptop Taktikal Ruggedized Core i7",
+          "price": 24500000,
+          "quantity": 1,
+          "imageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=60"
+        }
+      ],
+      "totalAmount": 24500000,
+      "status": "PAID",
+      "paymentMethod": "QRIS",
+      "shippingAddress": {
+        "recipientName": "Kadet Mahasiswa",
+        "street": "Alamat pengiriman default",
+        "city": "Jakarta"
+      },
+      "paymentId": "pay-1794240007906",
+      "createdAt": "2026-11-09T16:00:07.768Z",
+      "timeline": [
+        {
+          "timestamp": "2026-11-09T16:00:07.768Z",
+          "event": "ORDER_INITIATED",
+          "message": "Order dibuat dan siap menunggu inisiasi pembayaran"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:07.768Z",
+          "event": "STOCK_RESERVED",
+          "message": "Stok berhasil dikunci di Katalog Service (Pending Payment)"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:07.913Z",
+          "event": "PAYMENT_INITIATED",
+          "message": "Tagihan pembayaran pay-1794240007906 berhasil diterbitkan dengan metode QRIS"
+        },
+        {
+          "timestamp": "2026-11-09T16:00:08.141Z",
+          "event": "PAYMENT_SUCCESS",
+          "message": "Pembayaran pay-1794240007906 BERHASIL. Stok barang telah terpotong permanen."
+        }
+      ],
+      "paymentDetails": {
+        "id": "pay-1794240007906",
+        "orderId": "order-1794240007704",
+        "customerId": "usr-1794240007381",
+        "customerName": "Kadet Mahasiswa",
+        "amount": 24500000,
+        "paymentMethod": "QRIS",
+        "status": "PENDING",
+        "referenceNumber": "QRIS-40007906",
+        "metadata": {
+          "qrCodeString": "00020101021226680016ID.CO.UNHAN.PAY51450114000100000000005204581253033605802ID5914UNHAN STORE6005BOGOR63049279",
+          "qrExpiryMinutes": 15
+        },
+        "createdAt": "2026-11-09T16:00:07.906Z"
+      }
+    },
+    {
+      "id": "order-1001",
+      "userId": "usr-cust-2",
+      "customerName": "Siti Rahmawati",
+      "customerEmail": "siti@gmail.com",
+      "items": [
+        {
+          "productId": "prod-2",
+          "name": "Smartwatch GPS Taktikal Solarpower",
+          "price": 6800000,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6800000,
+      "status": "PAID",
+      "shippingAddress": {
+        "recipientName": "Siti Rahmawati",
+        "phone": "081288887777",
+        "street": "Komplek Unhan Indonesia, Sentul Citeureup",
+        "city": "Bogor",
+        "province": "Jawa Barat",
+        "postalCode": "16810"
+      },
+      "paymentMethod": "QRIS",
+      "paymentId": "pay-1001",
+      "createdAt": "2026-11-04T10:00:00.000Z",
+      "timeline": [
+        {
+          "timestamp": "2026-11-04T10:00:00.000Z",
+          "event": "ORDER_CREATED",
+          "message": "Pesanan dibuat"
+        },
+        {
+          "timestamp": "2026-11-04T10:00:05.000Z",
+          "event": "STOCK_RESERVED",
+          "message": "Stok berhasil di-reserve di Katalog Service"
+        },
+        {
+          "timestamp": "2026-11-04T10:02:30.000Z",
+          "event": "PAYMENT_CONFIRMED",
+          "message": "Pembayaran QRIS lunas terkonfirmasi"
+        },
+        {
+          "timestamp": "2026-11-04T10:02:31.000Z",
+          "event": "STOCK_COMMITTED",
+          "message": "Stok telah dipotong permanen"
+        }
+      ]
+    }
+  ]
+}
