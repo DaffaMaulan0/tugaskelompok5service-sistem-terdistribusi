@@ -1,0 +1,105 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Elektronik & Gadget",
+      "description": "Perangkat teknologi, laptop, dan komunikasi"
+    },
+    {
+      "id": "cat-2",
+      "name": "Perlengkapan Lapangan",
+      "description": "Peralatan lapangan, taktikal, dan outdoor"
+    },
+    {
+      "id": "cat-3",
+      "name": "Pakaian & Seragam",
+      "description": "Pakaian tugas, dinas, dan seragam lapangan"
+    },
+    {
+      "id": "cat-4",
+      "name": "Buku & Modul Kuliah",
+      "description": "Buku teks sistem terdistribusi dan teknik informatika"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Laptop Taktikal Ruggedized Core i7",
+      "description": "Laptop tahan benturan, air, dan suhu ekstrem untuk operasi lapangan militer.",
+      "price": 24500000,
+      "stock": 14,
+      "reserved": 0,
+      "categoryId": "cat-1",
+      "imageUrl": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": "prod-2",
+      "name": "Smartwatch GPS Taktikal Solarpower",
+      "description": "Jam tangan dengan navigasi koordinat militer, altimeter, dan kompas 3-axis.",
+      "price": 6800000,
+      "stock": 25,
+      "reserved": 0,
+      "categoryId": "cat-1",
+      "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": "prod-3",
+      "name": "Ransel Tempur Taktikal 55L Waterproof",
+      "description": "Tas ransel berkapasitas besar dengan sistem modular MOLLE webbing berstandar militer.",
+      "price": 1350000,
+      "stock": 40,
+      "reserved": 0,
+      "categoryId": "cat-2",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": "prod-4",
+      "name": "Sepatu Boots Taktikal Gore-Tex Anti-Selip",
+      "description": "Sepatu lapangan tahan air dengan sol vibram untuk mobilitas tinggi di segala medan.",
+      "price": 2100000,
+      "stock": 30,
+      "reserved": 0,
+      "categoryId": "cat-3",
+      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=60"
+    },
+    {
+      "id": "prod-5",
+      "name": "Buku Konsep & Praktik Sistem Terdistribusi",
+      "description": "Panduan komprehensif microservices, konsistensi data, SAGA pattern, dan API Gateway.",
+      "price": 185000,
+      "stock": 50,
+      "reserved": 0,
+      "categoryId": "cat-4",
+      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=60"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res-1794240007760",
+      "orderId": "order-1794240007704",
+      "items": [
+        {
+          "productId": "prod-1",
+          "quantity": 1
+        }
+      ],
+      "status": "COMMITTED",
+      "createdAt": "2026-11-09T16:00:07.760Z",
+      "committedAt": "2026-11-09T16:00:08.135Z"
+    },
+    {
+      "id": "res-1794240008243",
+      "orderId": "order-1794240008232",
+      "items": [
+        {
+          "productId": "prod-2",
+          "quantity": 2
+        }
+      ],
+      "status": "RELEASED",
+      "createdAt": "2026-11-09T16:00:08.243Z",
+      "releasedAt": "2026-11-09T16:00:08.300Z",
+      "reason": "Saldo kartu tidak mencukupi (Uji Kompensasi)"
+    }
+  ]
+}
