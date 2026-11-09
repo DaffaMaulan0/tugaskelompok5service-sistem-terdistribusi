@@ -1,0 +1,18 @@
+{
+  "name": "unhan-sistem-terdistribusi-microservices",
+  "version": "1.0.0",
+  "description": "Tugas Kelompok Sistem Terdistribusi - Arsitektur Microservices E-Commerce (Peserta 1 - 5)",
+  "scripts": {
+    "test": "node tests/e2e-test.js",
+    "seed": "node tests/seed-data.js"
+  },
+  "keywords": [
+    "sistem-terdistribusi",
+    "microservices",
+    "saga-pattern",
+    "unhan",
+    "api-gateway"
+  ],
+  "author": "Kelompok Sistem Terdistribusi",
+  "license": "ISC"
+}
