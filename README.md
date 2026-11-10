@@ -4,6 +4,16 @@ Proyek ini merupakan implementasi arsitektur **Microservices** dan **Transaksi T
 
 ---
 
+## 👥 Anggota Kelompok
+
+| Nama | Akun GitHub | Peran |
+|---|---|---|
+| HizkiaGopas | [@HizkiaGopas](https://github.com/HizkiaGopas) | Katalog Service (Peserta 1), Pembayaran Service (Peserta 4) |
+| daffamaulana | [@DaffaMaulan0](https://github.com/DaffaMaulan0) | Pelanggan Service (Peserta 2), API Gateway, Dashboard & Tests (Peserta 5) |
+| MichaelPratamaSiagian | [@MichaelPratamaSiagian](https://github.com/MichaelPratamaSiagian) | Order Service (Peserta 3) |
+
+---
+
 ## 👥 Pembagian Tugas & Struktur Folder
 
 Sesuai dengan ketentuan tugas kelompok:
